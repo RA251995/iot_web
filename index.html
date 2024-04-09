@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT Visualization</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #333;
+      /* Default background color */
+      color: #f2f2f2;
+      /* Default text color */
+      position: relative;
+      /* Make body a positioning context */
+      font-family: 'Roboto', sans-serif;
+      padding: 1%;
+    }
+
+    .container {
+      padding: 2%;
+      border-radius: 3px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    canvas {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+
+    .progress-bar {
+      padding: 1%;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h3>Moisture Level</h3>
+    <div class="progress-bar" id="progressBar">0%</div>
+  </div>
+
+  <div class="container">
+    <h3>Day Trend</h3>
+    <canvas id="myChart" style="position: relative; height:60vh; width:100vw"></canvas>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
