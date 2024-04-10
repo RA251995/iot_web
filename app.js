@@ -80,7 +80,7 @@ function updateProgressBar(value) {
 // Function to fetch data from ThingSpeak
 function fetchData() {
   var channelID = '2499687';
-  var url = 'https://api.thingspeak.com/channels/' + channelID + '/feeds.json?results=17';
+  var url = 'https://api.thingspeak.com/channels/' + channelID + '/feeds.json?results=24';
 
   fetch(url)
     .then(response => response.json())
